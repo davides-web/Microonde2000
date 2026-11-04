@@ -309,6 +309,19 @@ export const RICETTE = [
     frigoGiorni: 2, riscaldamento: FREDDA
   }),
 
+  crea({
+    id: 'mela_datteri_yogurt', nome: 'Mela calda con datteri, cannella e yogurt greco', tempo: 5,
+    etichette: ['spuntino', 'colazione', 'ricarica'],
+    contenitore: 'Ciotolina di ceramica con coperchio.',
+    ingredienti: [['mela', 150], ['datteri', 20], ['yogurt_greco_0', 120, 'crudo'], ['cannella', 0.5]],
+    cottura: [[800, 2.5, 'mela e datteri']],
+    passi: [
+      'Taglia la mela a cubetti e i datteri a pezzetti, aggiungi la cannella e 1 cucchiaio d\'acqua.',
+      'Copri e cuoci a 800 W per 2 min e 30 s, mescolando a metà.',
+      'Riposo 1 min, poi servi sullo yogurt greco.'
+    ]
+  }),
+
   // ===================== PRANZI E CENE =====================
   crea({
     id: 'chili_tacchino', nome: 'Chili di tacchino e borlotti con riso (3 porzioni)', porzioni: 3, tempo: 30,
@@ -763,6 +776,19 @@ export const RICETTE = [
       'Cuoci la pasta con 400 ml di acqua, senza coperchio, a 800 W per il tempo della confezione più 3 min, mescolando ogni 4 min; scola.',
       'Nella pirofila metti pomodorini tagliati, aglio e cozze surgelate; copri e cuoci a 800 W per 4 min mescolando a metà.',
       'Unisci la pasta, il prezzemolo, il peperoncino, i semi di canapa e il parmigiano.'
+    ]
+  }),
+  crea({
+    id: 'pasta_pomodoro_ricotta', nome: 'Pasta integrale al pomodoro, basilico e ricotta', tempo: 15,
+    etichette: ['pranzo', 'cena', 'ricarica'],
+    contenitore: 'Ciotola di vetro alta da almeno 1,5 litri (la pasta fa schiuma).',
+    ingredienti: [['pasta_integrale', 100], ['passata', 200], ['ricotta', 80], ['parmigiano', 10], ['basilico', 5], ['aglio', 2]],
+    cottura: [[800, 13, 'pasta'], [800, 2, 'sugo']],
+    passi: [
+      'Copri la pasta con 450 ml di acqua nella ciotola alta.',
+      'Cuoci senza coperchio a 800 W per il tempo della confezione più 3 minuti, mescolando ogni 4 min; aggiungi acqua calda se si asciuga troppo.',
+      'Scola, aggiungi passata e aglio tritato e cuoci a 800 W per 2 min.',
+      'Completa con ricotta, parmigiano e basilico; mescola e lascia riposare 1 min.'
     ]
   }),
   crea({

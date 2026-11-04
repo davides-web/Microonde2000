@@ -7,9 +7,11 @@ import { esc } from './ui/dom.js';
 import * as vistaImpostazioni from './ui/vista-impostazioni.js';
 import * as vistaIngredienti from './ui/vista-ingredienti.js';
 import * as vistaRicette from './ui/vista-ricette.js';
+import * as vistaPiano from './ui/vista-piano.js';
 
 // Elenco delle schede. Ogni vista esporta una funzione "mostra(ctx, el)".
 const VISTE = {
+  piano: vistaPiano,
   ricette: vistaRicette,
   ingredienti: vistaIngredienti,
   impostazioni: vistaImpostazioni

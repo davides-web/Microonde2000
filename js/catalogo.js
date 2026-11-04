@@ -4,6 +4,7 @@
 // ==========================================================
 import { INGREDIENTI } from './dati/ingredienti.js';
 import { RICETTE } from './dati/ricette.js';
+import { creaContesto } from './generatore.js';
 
 // Restituisce l'elenco degli ingredienti in uso.
 export function elencoIngredienti(stato) {
@@ -55,4 +56,9 @@ export function mappaRicette(stato) {
 
 export function ePredefinitaRicetta(id) {
   return RICETTE.some((r) => r.id === id);
+}
+
+// Contesto per il generatore e i riepiloghi, a partire dallo stato salvato.
+export function contestoPiano(stato) {
+  return creaContesto(stato.impostazioni, elencoRicette(stato), mappaIngredienti(stato));
 }

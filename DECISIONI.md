@@ -72,3 +72,26 @@ soluzione più semplice. Eccole in ordine.
   da verificare (vedi DA_VERIFICARE.md).
 - Le percentuali dei macro sono calcolate sull'energia da proteine, grassi e
   carboidrati (4/9/4 kcal per grammo), così sommano sempre a 100%.
+
+## Generatore del piano
+- Algoritmo semplice e deterministico (con "seme"): per ogni giorno prova
+  molte combinazioni casuali di ricette adatte a ciascun pasto, ottimizza le
+  porzioni (da 0,5 a 2 porzioni, a passi di 0,25) e tiene la migliore; ripete
+  la settimana 5 volte e sceglie la migliore; i giorni rimasti fuori
+  tolleranza vengono ricalcolati con più tentativi.
+- Le **porzioni** di un pasto possono essere frazionarie: il meal prep e la
+  lista della spesa scalano le quantità in base alla somma delle porzioni.
+- **Batch cooking**: una ricetta batch ripetuta entro 2 giorni dalla prima
+  volta (e comunque entro i giorni massimi in frigo), per al massimo 3 pasti,
+  conta come "avanzo" e riceve un bonus. Il meal prep la cucina una volta sola.
+- **Varietà**: limite rigido di N usi a settimana (default 3) e mai la stessa
+  ricetta due volte nello stesso giorno; piccola penalità per le ripetizioni
+  che non sono avanzi batch.
+- **Amido resistente**: l'obiettivo è "morbido" (penalità se manca). Se
+  l'integrazione è attiva, la fecola cruda mancante (multipli di 5 g, max
+  40 g/giorno di default) viene calcolata automaticamente e mostrata nel
+  piano; le sue kcal e i suoi carboidrati sono contati nei totali.
+- **Sostituzione a mano**: il pasto scelto viene bloccato con la porzione che
+  meglio si adatta al giorno; c'è anche "Rigenera questo giorno".
+- Le settimane si identificano con la data del lunedì; di sabato e domenica
+  l'app propone già la settimana successiva.
