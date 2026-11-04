@@ -10,10 +10,8 @@ export function esc(testo) {
 }
 
 // Numero formattato all'italiana con N decimali.
-export function num(valore, decimali = 0) {
-  const n = Number(valore) || 0;
-  return n.toLocaleString('it-IT', { minimumFractionDigits: decimali, maximumFractionDigits: decimali });
-}
+import { num } from '../formato.js';
+export { num };
 
 // Mostra un breve messaggio in basso.
 let timerAvviso;

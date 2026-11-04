@@ -95,3 +95,20 @@ soluzione più semplice. Eccole in ordine.
   meglio si adatta al giorno; c'è anche "Rigenera questo giorno".
 - Le settimane si identificano con la data del lunedì; di sabato e domenica
   l'app propone già la settimana successiva.
+
+## Lista della spesa e meal prep
+- La spesa somma le quantità di tutti i pasti pianificati (porzioni
+  comprese) più la fecola di integrazione; la mensa è esclusa.
+- Arrotondamento: confezioni intere con una tolleranza del 2% (1010 g di riso
+  non fanno comprare un secondo pacco da 1 kg); prodotti sfusi arrotondati ai
+  50 g superiori; per uova, frutta e alcune verdure si indica anche il numero
+  indicativo di pezzi.
+- Le spunte sono salvate per settimana. "Copia testo" copia solo gli articoli
+  non ancora spuntati, raggruppati per reparto.
+- La nota "solo uova biologiche" è un campo dell'ingrediente (modificabile).
+- Meal prep: le ricette batch che contengono ingredienti "raffreddati" si
+  cucinano **la sera prima** del primo pasto (per Lunedì: "Domenica
+  precedente"); le altre batch il giorno del primo pasto; le ricette singole
+  al momento, con l'eventuale preparazione anticipata (es. patate) il giorno
+  prima. I tempi indicati sono per la quantità standard della ricetta: con
+  quantità maggiori l'app suggerisce di allungarli di circa un terzo.

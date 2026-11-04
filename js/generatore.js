@@ -189,10 +189,23 @@ function registraGiorno(ctx, pasti, giorno, usi, sessioni) {
 // Una sessione batch è "aperta" se il cibo è ancora in frigo da pochi
 // giorni (entro frigoGiorni, massimo 2 giorni dopo la cottura) e non
 // si sono già fatti 3 pasti.
-function sessioneAperta(ricetta, sessioni, giorno) {
+export function sessioneAperta(ricetta, sessioni, giorno) {
   if (!sessioni) return null;
-  const giorniMax = Math.min(2, Math.max(0, Number(ricetta.frigoGiorni) || 0));
+  const giorniMax = finestraBatch(ricetta);
   return sessioni.find((s) => giorno >= s.inizio && giorno - s.inizio <= giorniMax && s.pasti < 3) || null;
+}
+
+// Vero se la ricetta va cucinata in anticipo e raffreddata (amido resistente).
+export function richiedeRaffreddamento(ricetta) {
+  return (ricetta.ingredienti || []).some((i) => i.uso === 'raffreddato');
+}
+
+// Quanti giorni dopo il primo pasto si possono mangiare gli avanzi:
+// al massimo 2, e comunque entro i giorni di frigo contando anche il
+// giorno di cottura anticipata.
+export function finestraBatch(ricetta) {
+  const frigo = Math.max(0, Number(ricetta.frigoGiorni) || 0);
+  return Math.max(0, Math.min(2, frigo - (richiedeRaffreddamento(ricetta) ? 1 : 0)));
 }
 
 function costruisciSettimana(ctx, pianoEsistente, rnd, combinazioni) {
