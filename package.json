@@ -1,0 +1,11 @@
+{
+  "name": "microonde2000",
+  "version": "1.0.0",
+  "description": "Pianificatore di pasti settimanali cucinati solo al microonde (PWA offline).",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT"
+}

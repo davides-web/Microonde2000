@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Icona: un microonde stilizzato con un piatto fumante -->
+  <rect width="512" height="512" rx="96" fill="#2f6f4f"/>
+  <rect x="72" y="132" width="368" height="248" rx="32" fill="#f6f7f4"/>
+  <rect x="100" y="160" width="236" height="192" rx="18" fill="#cfe3d6"/>
+  <ellipse cx="218" cy="300" rx="80" ry="18" fill="#2f6f4f"/>
+  <path d="M188 268c-10-14 10-22 0-36M218 268c-10-14 10-22 0-36M248 268c-10-14 10-22 0-36" stroke="#2f6f4f" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <circle cx="388" cy="196" r="16" fill="#2f6f4f"/>
+  <circle cx="388" cy="250" r="16" fill="#2f6f4f"/>
+  <rect x="368" y="296" width="40" height="40" rx="8" fill="#e0a43a"/>
+</svg>
