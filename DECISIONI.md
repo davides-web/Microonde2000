@@ -49,3 +49,26 @@ soluzione più semplice. Eccole in ordine.
   trovare la voce giusta su Cronometer.
 - Il sale iposodico è considerato 50% cloruro di sodio e 50% cloruro di
   potassio (composizione tipica in commercio).
+
+## Ricettario
+- 52 ricette originali. Alcune non richiedono cottura vera e propria per
+  l'ingrediente principale (es. yogurt con fecola), ma hanno sempre almeno un
+  passaggio al microonde (frutta scaldata, mandorle tostate, cipolla
+  ammorbidita): "solo microonde" è inteso come "nessun altro elettrodomestico
+  di cottura" (niente fornelli, forno, friggitrice, bollitore).
+- La **fecola** va sempre aggiunta a freddo: scaldata perde l'amido resistente.
+- Le ricette **batch** con riso, patate, orzo, farro o legumi prevedono di
+  cuocere e raffreddare in frigo almeno 12 ore: per questo quegli
+  ingredienti sono marcati "raffreddato" (stima di amido resistente più alta).
+- I tempi sono scritti per un microonde da **800 W**; nelle impostazioni si
+  indica la potenza del proprio forno e la scheda della ricetta mostra il
+  fattore di correzione.
+- Nessuna ricetta predefinita usa olio extravergine (è disattivato per
+  default): i grassi vengono da frutta secca, semi, uova, formaggi, pesce
+  grasso e latte di cocco. Se si attiva l'EVO, lo si può aggiungere nelle
+  proprie ricette.
+- Giorni massimi in frigo: 2 per piatti con riso cotto e pesce, 3 per carne,
+  legumi e cereali, 1 per preparazioni crude delicate. Sono scelte prudenti
+  da verificare (vedi DA_VERIFICARE.md).
+- Le percentuali dei macro sono calcolate sull'energia da proteine, grassi e
+  carboidrati (4/9/4 kcal per grammo), così sommano sempre a 100%.

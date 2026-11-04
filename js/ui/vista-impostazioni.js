@@ -171,7 +171,8 @@ export function mostra(ctx, el) {
     });
   });
 
-  el.addEventListener('click', (ev) => {
+  // onclick (non addEventListener): "el" è il contenitore fisso di tutte le viste.
+  el.onclick = (ev) => {
     const b = ev.target.closest('[data-azione]');
     if (!b || b.tagName === 'INPUT') return;
     const azione = b.dataset.azione;
@@ -197,7 +198,7 @@ export function mostra(ctx, el) {
         avviso('Dati cancellati');
       }
     }
-  });
+  };
 
   // --- Importazione backup ---
   el.querySelector('[data-azione="importa"]').addEventListener('change', async (ev) => {

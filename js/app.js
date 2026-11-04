@@ -6,9 +6,11 @@ import { caricaStato, salvaStato } from './archivio.js';
 import { esc } from './ui/dom.js';
 import * as vistaImpostazioni from './ui/vista-impostazioni.js';
 import * as vistaIngredienti from './ui/vista-ingredienti.js';
+import * as vistaRicette from './ui/vista-ricette.js';
 
 // Elenco delle schede. Ogni vista esporta una funzione "mostra(ctx, el)".
 const VISTE = {
+  ricette: vistaRicette,
   ingredienti: vistaIngredienti,
   impostazioni: vistaImpostazioni
 };
@@ -38,6 +40,7 @@ function mostraVista() {
   document.querySelectorAll('#schede a').forEach((a) => {
     a.classList.toggle('attiva', a.getAttribute('href') === '#' + nome);
   });
+  el.onclick = null; // ogni vista imposta i propri gestori
   try {
     vista.mostra(ctx, el);
   } catch (e) {

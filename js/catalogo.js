@@ -3,6 +3,7 @@
 // modifiche dell'utente (salvate nel telefono).
 // ==========================================================
 import { INGREDIENTI } from './dati/ingredienti.js';
+import { RICETTE } from './dati/ricette.js';
 
 // Restituisce l'elenco degli ingredienti in uso.
 export function elencoIngredienti(stato) {
@@ -34,4 +35,24 @@ export function creaId(nome, esistenti) {
   let n = 2;
   while (esistenti.has(id)) id = `${base}_${n++}`;
   return id;
+}
+
+// Restituisce l'elenco delle ricette in uso (predefinite + dell'utente).
+export function elencoRicette(stato) {
+  const eliminate = new Set(stato.ricetteEliminate || []);
+  const utente = stato.ricetteUtente || {};
+  const risultato = RICETTE.filter((r) => !eliminate.has(r.id)).map((r) => (utente[r.id] ? { ...r, ...utente[r.id], predefinita: true } : r));
+  const predefinite = new Set(RICETTE.map((r) => r.id));
+  for (const [id, r] of Object.entries(utente)) {
+    if (!predefinite.has(id) && !eliminate.has(id)) risultato.push({ ...r, id, predefinita: false });
+  }
+  return risultato;
+}
+
+export function mappaRicette(stato) {
+  return Object.fromEntries(elencoRicette(stato).map((r) => [r.id, r]));
+}
+
+export function ePredefinitaRicetta(id) {
+  return RICETTE.some((r) => r.id === id);
 }
