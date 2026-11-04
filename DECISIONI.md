@@ -51,7 +51,7 @@ soluzione più semplice. Eccole in ordine.
   potassio (composizione tipica in commercio).
 
 ## Ricettario
-- 52 ricette originali. Alcune non richiedono cottura vera e propria per
+- 54 ricette originali. Alcune non richiedono cottura vera e propria per
   l'ingrediente principale (es. yogurt con fecola), ma hanno sempre almeno un
   passaggio al microonde (frutta scaldata, mandorle tostate, cipolla
   ammorbidita): "solo microonde" è inteso come "nessun altro elettrodomestico
