@@ -10,12 +10,14 @@ import * as vistaRicette from './ui/vista-ricette.js';
 import * as vistaPiano from './ui/vista-piano.js';
 import * as vistaSpesa from './ui/vista-spesa.js';
 import * as vistaMealprep from './ui/vista-mealprep.js';
+import * as vistaCronometer from './ui/vista-cronometer.js';
 
 // Elenco delle schede. Ogni vista esporta una funzione "mostra(ctx, el)".
 const VISTE = {
   piano: vistaPiano,
   spesa: vistaSpesa,
   mealprep: vistaMealprep,
+  cronometer: vistaCronometer,
   ricette: vistaRicette,
   ingredienti: vistaIngredienti,
   impostazioni: vistaImpostazioni

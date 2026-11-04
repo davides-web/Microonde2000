@@ -112,3 +112,13 @@ soluzione più semplice. Eccole in ordine.
   al momento, con l'eventuale preparazione anticipata (es. patate) il giorno
   prima. I tempi indicati sono per la quantità standard della ricetta: con
   quantità maggiori l'app suggerisce di allungarli di circa un terzo.
+
+## Cronometer, documentazione e test
+- L'elenco per Cronometer è diviso per pasto (come i gruppi di Cronometer),
+  con il **nome inglese USDA** accanto a quello italiano per trovare la voce
+  giusta; la mensa è indicata come "da registrare a parte" con la stima.
+- I test usano solo `node:test` (Node 20+); un workflow GitHub Actions li
+  esegue a ogni push e pull request.
+- Nessun file di build: per pubblicare basta attivare GitHub Pages sul ramo
+  `main`, cartella principale (file `.nojekyll` incluso per servire i file
+  così come sono).
