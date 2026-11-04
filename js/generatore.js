@@ -72,9 +72,15 @@ export function fecolaNecessaria(arAttuale, ctx) {
 
 // Totali di un giorno: pasti + eventuale mensa + eventuale fecola.
 // "pasti" è { idPasto: { ricetta, fattore } | { mensa: true } }.
+// Solo i pasti previsti dalle impostazioni attuali (se un pasto viene
+// tolto nelle impostazioni, i piani già salvati non lo contano più).
+export function pastiAttivi(pasti, imp) {
+  return Object.fromEntries(imp.pasti.filter((s) => pasti[s.id]).map((s) => [s.id, pasti[s.id]]));
+}
+
 export function totaliGiorno(pasti, ctx) {
   const tot = vuoto();
-  for (const p of Object.values(pasti)) {
+  for (const p of Object.values(pastiAttivi(pasti, ctx.imp))) {
     if (!p) continue;
     if (p.mensa) {
       const m = ctx.imp.mensa;

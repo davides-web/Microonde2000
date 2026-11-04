@@ -4,7 +4,7 @@
 // integrazione e arrotonda alle confezioni tipiche.
 // ==========================================================
 import { REPARTI } from './dati/ingredienti.js';
-import { totaliGiorno } from './generatore.js';
+import { totaliGiorno, pastiAttivi } from './generatore.js';
 import { num } from './formato.js';
 
 // Grammi di ogni ingrediente necessari per un insieme di pasti.
@@ -26,7 +26,7 @@ export function grammiPasti(pasti, ctx, accumulo = {}) {
 export function fabbisognoSettimana(piano, ctx) {
   const totale = {};
   for (const giorno of piano.giorni) {
-    grammiPasti(giorno.pasti, ctx, totale);
+    grammiPasti(pastiAttivi(giorno.pasti, ctx.imp), ctx, totale);
     const { fecolaG } = totaliGiorno(giorno.pasti, ctx);
     if (fecolaG > 0) totale.fecola = (totale.fecola || 0) + fecolaG;
   }

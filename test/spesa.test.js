@@ -78,3 +78,10 @@ test('piano reale: la fecola di integrazione finisce nella spesa', () => {
   // Nessun ingrediente escluso nella spesa
   for (const id of ['pane_bianco', 'albume', 'avocado', 'olio_semi', 'sale']) assert.equal(f[id], undefined);
 });
+
+test('un pasto tolto dalle impostazioni non entra più nella spesa', () => {
+  const ctx = contestoProva();
+  const piano = { giorni: Array(7).fill({ pasti: { pranzo: { ricetta: 'a', fattore: 1 }, vecchio: { ricetta: 'b', fattore: 1 } } }) };
+  const f = fabbisognoSettimana(piano, ctx);
+  assert.equal(f.zucchine, undefined);
+});
