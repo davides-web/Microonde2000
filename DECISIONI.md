@@ -30,3 +30,22 @@ soluzione più semplice. Eccole in ordine.
   contata nei totali del giorno e il resto dei pasti la compensa.
 - I pasti hanno una **quota indicativa** di kcal (25/35/30/10%) usata solo per
   evitare porzioni squilibrate (es. una colazione da 1000 kcal).
+
+## Tabella ingredienti
+- 175 ingredienti, di cui alcuni **volutamente esclusi** (pane, albume,
+  avocado, würstel, prosciutto cotto, proteine in polvere, dado, farina 00,
+  olio di semi, sale da cucina, olio EVO): servono perché, se l'utente li usa
+  in una propria ricetta, l'app la segnala e il generatore la scarta.
+- I **carboidrati** sono quelli *disponibili* (senza fibre), come nelle
+  etichette europee e in CREA; per i dati USDA è stata sottratta la fibra.
+- L'**amido resistente** ha tre stime per ingrediente: crudo, cotto e mangiato
+  caldo, cotto e raffreddato in frigo (≥12 h). In ogni ricetta, ogni
+  ingrediente indica in quale stato viene mangiato.
+- Pesi: cereali e legumi secchi a peso **crudo**, legumi in barattolo a peso
+  **sgocciolato**. Così la lista della spesa coincide con le ricette.
+- La **confezione tipica** (grammi) è un campo dell'ingrediente: 0 significa
+  "a peso" (frutta e verdura sfuse), arrotondato ai 50 g superiori.
+- Per ogni ingrediente c'è anche il **nome inglese** usato da USDA, utile per
+  trovare la voce giusta su Cronometer.
+- Il sale iposodico è considerato 50% cloruro di sodio e 50% cloruro di
+  potassio (composizione tipica in commercio).

@@ -5,9 +5,11 @@
 import { caricaStato, salvaStato } from './archivio.js';
 import { esc } from './ui/dom.js';
 import * as vistaImpostazioni from './ui/vista-impostazioni.js';
+import * as vistaIngredienti from './ui/vista-ingredienti.js';
 
 // Elenco delle schede. Ogni vista esporta una funzione "mostra(ctx, el)".
 const VISTE = {
+  ingredienti: vistaIngredienti,
   impostazioni: vistaImpostazioni
 };
 
